@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+body {
+    background-color: #ffffff;
+     font-family: 'Inter', sans-serif;
+     min-height: 100vh;
+}
+.separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Light greenish background from your image */
+    padding: 10px 0;
+}
+
+.line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #C8C8C8;
+    /* Adjust to match the line color in image */
+    border: none;
+}
+
+.yay-text {
+    font-weight: bold;
+    color: #FF6B82;
+    font-size: 24px;
+    /* Dark gray text */
+}
+
+.cart-card {
+    border: 2px solid #C8C8C8;
+    border-radius: 0;
+    cursor: pointer;
+    transition: border 0.3s ease;
+  }
+
+  .cart-card.selected {
+    border: 2px solid #FF6B82;
+  }
+
+  .card-details {
+    overflow: hidden;
+    height: 0;
+    transition: height 0.4s ease;
+  }
+
+  .cart-card.selected .card-details {
+    height: auto; /* JS will control the actual height */
+    transition: height 0.4s ease;
+  }
+
+.radio-input {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #FF6B82;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.radio-input:checked::before {
+  content: '';
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #FF6B82;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.unit {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.discount-badge {
+    background-color: #FF6B81;
+    color: white;
+    font-size: 14px;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.standard-text {
+    font-size: 14px;
+    color: #000000;
+}
+
+.price-current {
+    font-size: 14px;
+    color: #000;
+    font-weight: bold;
+}
+
+.old-price {
+    font-size: 10px;
+}
+
+.drop-down-text {
+    font-size: 12px;
+    color: #000000;
+}
+
+.freeDelivery-text {
+    color: #FF6B82;
+    font-size: 14px;
+}
+
+.add-button {
+    background-color: #FF6B82;
+    color: #ffffff;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.add-button:focus {
+    outline: none;
+}
+
+.add-button:hover {
+    background-color: #cf495d;
+}
+
+.italic {
+    font-style: italic;
+    font-size: 14px;
+}
+
+.ribbon-tag {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: #FF6B81;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 0px;
+    z-index: 1;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.ribbon-tag::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-top: 8px solid #FF6B81;
+}
+
+@media (max-width: 767px) {
+    .yay-text {
+    font-size: 20px;
+}
+
+.radio-input {
+    width: 16px;
+    height: 16px;
+}
+
+.radio-input:checked::before {
+    width: 8px;
+    height: 8px;
+}
+
+.unit {
+    font-size: 16px;
+}
+
+.discount-badge {
+    font-size: 12px;
+}
+
+.standard-text {
+    font-size: 14px;
+}
+
+.price-current {
+    font-size: 14px;
+}
+
+.old-price {
+    font-size: 10px;
+}
+
+.drop-down-text {
+    font-size: 11px;
+}
+
+.freeDelivery-text {
+    color: #FF6B82;
+    font-size: 12px;
+}
+.add-button {
+    font-size: 14px;
+}
+
+.ribbon-tag {
+    font-size: 10px;
+}
+
+}
+
